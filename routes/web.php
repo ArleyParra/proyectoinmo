@@ -25,10 +25,10 @@ Route::get('productos/create', function (){
     return "AQUI VA A ESTAR EL FORMULARIO DE LA CREACIÓN DE PRODUCTOS";
 });
 
-Route::get('productos/{id}', function (){
+Route::get('productos/{id}', function ($id){
     return "el nombre del producto es $id";
 });
 
-Route::get('productos/{id}/{categoria}', function (){
+Route::get('productos/{id}/{categoria}', function ($id, $categoria){
     return "el nombre del producto es $id con la categoria $categoria";
 });
