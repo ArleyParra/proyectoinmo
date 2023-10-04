@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\DetalleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +19,8 @@ Route::get('/', function () {
     return "HOME PAGE";
 });
 
-Route::get('productos', function (){
-    return "LISTADO DE TODOS LOS PRODUCTOS";
-});
+Route::get('productos', [ProductController::class,'listProducts']);
+Route::get('detalle', [DetalleController::class,'listDetalle']);
 
 Route::get('productos/create', function (){
     return "AQUI VA A ESTAR EL FORMULARIO DE LA CREACIÓN DE PRODUCTOS";
