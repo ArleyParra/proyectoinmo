@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductDetalle extends Controller
+class DetalleController extends Controller
 {
     function listDetalle(){
         return view("detalle");
